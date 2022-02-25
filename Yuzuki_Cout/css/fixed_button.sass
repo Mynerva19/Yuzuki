@@ -1,0 +1,25 @@
+.fixed-circle
+    width: 100px
+    height: 100px
+    position: fixed
+    border-radius: 100%
+    background-color: #ffffff
+    top: -50px
+    left: -50px
+    transition: 0.3s
+    &:before
+        content: ">"
+        position: absolute
+        transform: rotate(0deg)
+        transform-origin: 50% 50%
+        font-size: 100px
+        top: -15% - 15%
+        left: 22% - 22%
+        transition: 0.5s
+    &:hover
+        top: -20px
+        left: -20px
+    &:hover:before
+        top: -17%
+        left: 24%
+        transform: rotate(28deg)

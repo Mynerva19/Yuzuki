@@ -1,0 +1,150 @@
+.fixed-circle {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  border-radius: 100%;
+  background-color: #ffffff;
+  top: -50px;
+  left: -50px;
+  transition: 0.3s;
+}
+.fixed-circle:before {
+  content: ">";
+  position: absolute;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  font-size: 100px;
+  top: -30%;
+  left: 0%;
+  transition: 0.5s;
+}
+.fixed-circle:hover {
+  top: -20px;
+  left: -20px;
+}
+.fixed-circle:hover:before {
+  top: -17%;
+  left: 24%;
+  transform: rotate(28deg);
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #71a8f4, #88b4f6, #9ec0f7, #b2cdf9, #c6d9fa, #c0e1fe, #bbe9ff, #baf0ff, #9bf5fa, #85f9e7, #87fac7, #a0f89f);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.mainCard {
+  width: 80%;
+  height: 500px;
+  border: 2px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: none;
+  z-index: -5;
+}
+.mainCard:after {
+  content: "";
+  width: 100%;
+  z-index: -3;
+  position: absolute;
+  height: 100%;
+  transition: 0.2s;
+  background-color: white;
+  top: 10px;
+  left: 10px;
+  opacity: 0.8;
+  animation: anim0 1.5s;
+}
+@keyframes anim0 {
+  from {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  to {
+    top: 10px;
+    left: 10px;
+    opacity: 0.8;
+  }
+}
+
+.profile .name1 {
+  text-align: center;
+  font-size: 30px;
+}
+.profile .profilePic {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: blue;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 50px;
+  opacity: 1;
+  animation: appearPic 1.5s;
+}
+@keyframes appearPic {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.buttonList {
+  position: relative;
+  left: 50%;
+  margin-top: 30px;
+  transform: translate(-50%);
+}
+
+.buttonA {
+  min-width: 250px;
+  height: 70px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 1.5px solid #000;
+  color: #000;
+  background: transparent;
+  z-index: 2;
+}
+.buttonA:hover:after {
+  top: 0;
+  left: 0;
+}
+.buttonA:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  transition: 0.2s;
+  background-color: #80ed99;
+  top: 5px;
+  left: 5px;
+  animation: anim02 1.5s;
+}
+@keyframes anim02 {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 5px;
+    left: 5px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

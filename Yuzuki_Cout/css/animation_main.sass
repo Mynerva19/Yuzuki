@@ -1,0 +1,33 @@
+
+$border-size: 0px
+
+@mixin anim($nameAnim)
+	animation: $nameAnim 1.5s
+	@keyframes #{$nameAnim}
+		from
+			top: 0
+			left: 0
+			opacity: 0
+		to 
+			top: 10px
+			left: 10px
+			opacity: 0.8
+
+@mixin anim2($nameAnim1)
+	animation: $nameAnim1 1.5s
+	@keyframes #{$nameAnim1}
+		from
+			top: 0
+			left: 0
+		to 
+			top: 5px
+			left: 5px
+
+@mixin animatPic
+	@keyframes appearPic
+		from
+			opacity: 0
+		to 
+			opacity: 1
+
+			

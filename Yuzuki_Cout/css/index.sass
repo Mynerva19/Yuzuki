@@ -1,0 +1,85 @@
+@import "animation_main"
+@import "fixed_button"
+//$main-color: linear-gradient(to right bottom, #71a8f4, #88b4f6, #9ec0f7, #b2cdf9, #c6d9fa, #c0e1fe, #bbe9ff, #baf0ff, #9bf5fa, #85f9e7, #87fac7, #a0f89f)
+$mainCard_color: none
+body
+	background-image: linear-gradient(to right bottom,#71a8f4, #88b4f6, #9ec0f7, #b2cdf9, #c6d9fa, #c0e1fe, #bbe9ff, #baf0ff, #9bf5fa, #85f9e7, #87fac7, #a0f89f)
+	height: 100vh
+	padding: 0
+	margin: 0
+
+.mainCard 
+	width: 80%
+	height:500px
+	border: 2px solid white
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	background-color: $mainCard_color
+	z-index: -5
+	&:after
+		content: ""
+		width: 100%
+		z-index: -3
+		position: absolute
+		height: 100%
+		transition: 0.2s
+		background-color: white
+		top: 10px - 0
+		left: 10px
+		opacity:0.8
+		@include anim(anim0)
+	
+.profile
+	.name1
+		text-align: center
+		font-size:30px
+	.profilePic
+		position: relative
+		width: 150px
+		height: 150px
+		border-radius: 100%
+		background-color: blue
+		left: 50%
+		transform: translate(-50%)
+		margin-top: 50px
+		opacity: 1
+		animation: appearPic 1.5s
+	@include animatPic
+		
+.buttonList
+	position: relative
+	left: 50%
+	margin-top: 30px
+	transform: translate(-50%)
+
+.buttonA
+	min-width: 250px
+	height: 70px
+	color: #fff
+	padding: 5px 10px
+	font-weight: bold
+	cursor: pointer
+	transition: all 0.3s ease
+	position: relative
+	display: inline-block
+	outline: none
+	border: 1.5px solid #000
+	color: #000
+	background: transparent	
+	z-index: 2
+	&:hover:after
+		top: 0
+		left: 0
+	&:after
+		content: ""
+		width: 100%
+		z-index: -1
+		position: absolute
+		height: 100%
+		transition: 0.2s
+		background-color: #80ed99
+		top: 5px
+		left: 5px
+		@include anim2(anim02)
